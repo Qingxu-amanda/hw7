@@ -1,0 +1,102 @@
+var ASound;
+var BSound;
+
+var x =-50 ;
+var h = -50 ;
+var r=0 ;
+var colorR = 255;
+var colorG = 255;
+var colorB = 255;
+
+function preload() {
+  ASound = loadSound("A.mp3");
+  BSound = loadSound("B.wav");
+  CSound = loadSound("C.wav");
+  DSound = loadSound("D.wav");
+  ESound = loadSound("E.wav"); 
+  FSound = loadSound("F.wav");
+  ESound = loadSound("E.wav");
+  GSound = loadSound("G.wav");
+ bgimage = loadImage('background.jpg');
+ 
+  }
+
+function setup() {
+  createCanvas(400, 400);
+   colorMode(RGB); 
+}
+
+function draw() {
+  background(255);
+   imageMode(CENTER);
+ 
+image(bgimage,200,200);
+    ellipse(x, h, r, r);
+   fill(colorR,colorG,colorB);
+  }
+
+function keyPressed() {
+  if (key == "a") {
+    x = 52 ;
+    h = 145 ;
+    r= 103 ;
+    colorR = 210;
+    colorG = 120;
+    colorB = 160;
+    ASound.play();
+  }
+  if (key == "b") {
+    x = 152 ;
+    h = 175 ;
+    r= 73 ;
+    colorR = 240;
+    colorG = 100;
+    colorB = 100;
+    BSound.play();
+  }
+    if (key == "c") {
+    x = 260 ;
+    h = 170 ;
+    r= 73 ;
+    colorR = 100;
+    colorG = 200;
+    colorB = 100;
+    CSound.play();
+  }  
+      if (key == "d") {
+    x = 350 ;
+    h = 160 ;
+    r= 100 ;
+    colorR = 120;
+    colorG = 180;
+    colorB = 140;
+    DSound.play();
+  }  
+      if (key == "e") {
+    x = 79 ;
+    h = 256 ;
+    r= 88 ;
+    colorR = 40;
+    colorG = 80;
+    colorB = 140;
+    ESound.play();
+  }  
+      if (key == "f") {
+    x = 167 ;
+    h = 264 ;
+    r= 73 ;
+    colorR = 20;
+    colorG = 40;
+    colorB = 120;
+    FSound.play();
+  }  
+        if (key == "g") {
+    x = 298 ;
+    h = 270 ;
+    r= 73 ;
+    colorR = 10;
+    colorG = 90;
+    colorB = 20;
+    GSound.play();
+  }  
+}
